@@ -2,7 +2,7 @@ type SelectProps = {
   name: string;
   textContent: string;
   options: string[];
-  onChangeHandle: (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onChangeHandle: (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
 };
 
 export default function Select({

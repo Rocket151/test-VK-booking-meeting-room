@@ -16,9 +16,9 @@ export default function App(): JSX.Element {
   const [formData, setFormData] = useState(initialState);
 
   const fieldChangeHandle = (
-    evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ): void => {
-    const { name, value } = evt.target;
+    const { name, value } = event.target;
     setFormData({
       ...formData,
       [name]: value
@@ -34,7 +34,7 @@ export default function App(): JSX.Element {
     event.preventDefault();
     console.log(formData);
   };
-  const resetHandle = (event: React.MouseEvent<HTMLButtonElement>): void => {
+  const resetHandle = (): void => {
     setFormData(initialState);
   };
 
